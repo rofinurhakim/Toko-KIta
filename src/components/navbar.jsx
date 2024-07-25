@@ -1,25 +1,44 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faEnvelope, faBell, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     return (
-        <>
-            <div>
-              <nav className="navbar bg-light">
-                <div className="container-fluid">
-                  <p className="text-success fw-bold h3">TOKOPEDIA</p>
-                  <form class="d-flex" role="search">
-                  <input className="form-control me-2" name="myInput" />
-                    <button className="btn btn-outline-success" type="submit">Search</button>
-                    <FontAwesomeIcon icon={faHome} />
-                  </form>
+        <nav className="navbar bg-light">
+            <div className="container-fluid d-flex justify-content-between align-items-center">
+                <p className="text-success fw-bold h2 m-2">TOKOKITA</p>
+
+                <div className="d-flex align-items-center flex-grow-1">
+                    <p className='m-2'>Kategori</p>
+                    <form className="d-flex me-3" role="search">
+                        <input className="form-control me-2 input-expanded" name="myInput" type="text" placeholder="Cari di Tokopedia" aria-label="Search" />
+                    </form>
+
+                    <div className="d-flex">
+                        <div className="position-relative m-2">
+                            <FontAwesomeIcon className='m-2 icon-large' icon={faShoppingCart} />
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">38</span>
+                        </div>
+                        <div className="position-relative m-2">
+                            <FontAwesomeIcon className='m-2 icon-large' icon={faBell} />
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                        </div>
+                        <div className="position-relative m-2">
+                            <FontAwesomeIcon className='m-2 icon-large' icon={faEnvelope} />
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                        </div>
+                    </div>
                 </div>
-              </nav>
+
+                <div className="d-flex align-items-center">
+                    <FontAwesomeIcon className='m-2 icon-large' icon={faUserCircle} />
+                    <p className='m-2'>kaito gam...</p>
+                    <FontAwesomeIcon className='m-2 icon-large' icon={faUserCircle} />
+                    <p className='m-2'>Moch</p>
+                </div>
             </div>
-        </>
+        </nav>
     )
-    
 }
 
-export default Navbar
+export default Navbar;
